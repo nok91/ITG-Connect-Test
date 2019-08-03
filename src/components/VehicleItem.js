@@ -31,10 +31,18 @@ class VehicleItem extends Component {
 
         return (
             <div className="vehicle-wrapper">
-                <div className="vehicle-wrapper-img" style={{backgroundImage : `url(${media[0].url})`}}>
-
+                <div className="vehicle-wrapper-img" style={{backgroundImage : `url(${media[0].url})`}} />
+                <div className="vehicle-description-block">
+                    <div className="vehicle-description-title">
+                        <h3><b>Vehicle Name {modelYear}</b></h3>
+                    </div>
+                    <div className="vehicle-description-details">
+                        <div className="price">From {price}</div>
+                        <div className="description">{description}</div>
+                    </div>
+                    {/* {id} - {modelYear} - {url} - {media[0].url} - {description} - {price} */}
                 </div>
-                {id} - {modelYear} - {url} - {media[0].url} - {description} - {price}
+                
             </div>
         );
     }
