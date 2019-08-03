@@ -1,5 +1,6 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { getData } from '../api';
+import VehicleItem from './VehicleItem';
 
 export default
 class VehicleList extends Component {
@@ -8,26 +9,43 @@ class VehicleList extends Component {
 		super(props);
 
 		this.state = {
-			data: null
+			data: [],
+			isLoading: true,
+			errors: null
 		}
 	}
 
 	componentDidMount() {
-		getData((data) => {
-			this.setState({
-				data
-			})
+		getData(({data, isLoading, error}) => {
+			this.setState({ data, isLoading, error});
 		});
+	} 
+
+	_renderVehicleHandler() {
+		const { data } = this.state;
+		return(
+			data.map((vehicle, index) => {
+				return (
+					<VehicleItem key={index} vehicle={vehicle} />
+				);
+			})
+		);
 	}
 
 	render() {
-		if(this.state.data) {
-			// console.log(this.state.data);
+		const { data, isLoading } = this.state;
+		if(!isLoading) {
 			return (
-				<h1>Hello World</h1>
+				<div>
+					{
+						this._renderVehicleHandler()
+					}	
+				</div>
 			)
 		}
-
+ 
 		return (<h1>Loading...</h1>);
+
 	}
 }
+
