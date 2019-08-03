@@ -3,7 +3,7 @@
  * Created by brett.hadley on 10/10/2016.
  */
 const expect = require('chai').expect;
-const getData = require('../src/api').getData;
+const getVehicles = require('../src/api').getVehicles;
 const getVehicle = require('../src/api').getVehicle;
 const server = require('../server');
 
@@ -13,7 +13,7 @@ describe("getData example test", function() {
     });
 
     it('should respond with an array of vehicles', (done) => {
-        getData((response) => {
+        getVehicles((response) => {
             const data = response.data;
             expect(Array.isArray(data)).to.equal(true);
             done();

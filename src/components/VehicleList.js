@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getData } from '../api';
+import { getVehicles } from '../api';
 import VehicleItem from './VehicleItem';
 
 export default
@@ -16,9 +16,9 @@ class VehicleList extends Component {
 	}
 
 	componentDidMount() {
-		getData(({data, isLoading, error}) => {
+		getVehicles(({data, isLoading, error}) => {
 			this.setState({ data, isLoading, error});
-		});
+		}); 
 	} 
 
 	render() {

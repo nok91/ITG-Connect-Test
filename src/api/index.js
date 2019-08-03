@@ -21,7 +21,7 @@ export const getDataOld = (cb) => {
 	vehicles.send();
 };
 
-export const getData = (cb) => {
+export const getVehicles = (cb) => {
 	axios
 	.get(`${API_URL}/api/vehicle`)
 	.then(vehicles => cb({ data: vehicles.data.vehicles, isLoading: false, error: false }))

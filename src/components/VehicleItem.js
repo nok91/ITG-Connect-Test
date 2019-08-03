@@ -32,7 +32,7 @@ class VehicleItem extends Component {
                 <div className="vehicle-wrapper-img" style={{backgroundImage : `url(${media[0].url})`}} />
                 <div className="vehicle-description-block">
                     <div className="vehicle-description-title">
-                        <h3><b>Vehicle Name {modelYear}</b></h3>
+                        <h3><b>{media[0].name} {modelYear}</b></h3>
                     </div>
                     <div className="vehicle-description-details">
                         <div className="price">From {price}</div>
