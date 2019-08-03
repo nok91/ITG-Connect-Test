@@ -1,3 +1,4 @@
+/* eslint-disable */
 const gulp = require('gulp');
 const browserify = require('browserify');
 const babelify = require('babelify');
