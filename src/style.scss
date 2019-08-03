@@ -48,9 +48,6 @@ body {
 				height: initial;
 				
 			}
-			@media (min-width: 1025px) {
-				
-			}
 
 			&:last-child{
 				border:0px;
@@ -71,8 +68,6 @@ body {
 			.vehicle-wrapper-img{
 				height: 100%;
 				width: 100px;
-				// height: 200px;
-				// width: 150px;
 				background-position: center center;
 				background-size: cover;
 
@@ -92,18 +87,12 @@ body {
 				}
 
 				.vehicle-description-title{
-					
-
 					h3{
 						margin: 0px 0px 5px 0px;
 
 						@media (min-width: 768px) {
 							margin: 5px 0px;
 						}
-					}
-
-					@media (min-width: 768px) and (max-width: 1024px) {
-						
 					}
 					@media (min-width: 768px) {
 						text-transform: uppercase;
@@ -115,10 +104,6 @@ body {
 				}
 				.vehicle-description-details{
 					.price {
-						
-						@media (min-width: 768px) and (max-width: 1024px) {
-							
-						}
 						@media (min-width: 768px) {
 							margin-bottom: 15px;
 						}

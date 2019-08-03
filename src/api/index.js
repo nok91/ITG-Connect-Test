@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
 * This is an example request. Create your own using best practises for
 * handling asynchronous data fetching
