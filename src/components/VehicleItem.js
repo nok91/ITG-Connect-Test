@@ -18,9 +18,7 @@ class VehicleItem extends Component {
 
 		getVehicle(url, ({data, isLoading, error}) => {
             this.setState({ data, isLoading, error});
-            console.log("Vehicle Item ", data)
         });
-        
 	} 
 
     render() {
@@ -40,9 +38,7 @@ class VehicleItem extends Component {
                         <div className="price">From {price}</div>
                         <div className="description">{description}</div>
                     </div>
-                    {/* {id} - {modelYear} - {url} - {media[0].url} - {description} - {price} */}
                 </div>
-                
             </div>
         );
     }

@@ -21,31 +21,23 @@ class VehicleList extends Component {
 		});
 	} 
 
-	_renderVehicleHandler() {
-		const { data } = this.state;
-		return(
-			data.map((vehicle, index) => {
-				return (
-					<VehicleItem key={index} vehicle={vehicle} />
-				);
-			})
-		);
-	}
-
 	render() {
 		const { data, isLoading } = this.state;
 		if(!isLoading) {
 			return (
 				<div className="vehicles-wrapper">
 					{
-						this._renderVehicleHandler()
+						data.map((vehicle, index) => {
+							return (
+								<VehicleItem key={index} vehicle={vehicle} />
+							);
+						})
 					}	
 				</div>
 			)
 		}
  
 		return (<h1>Loading...</h1>);
-
 	}
 }
 
