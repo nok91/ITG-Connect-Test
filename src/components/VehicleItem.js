@@ -30,7 +30,10 @@ class VehicleItem extends Component {
         const { id, modelYear, url, media } = vehicle;
 
         return (
-            <div key={id}>
+            <div className="vehicle-wrapper">
+                <div className="vehicle-wrapper-img" style={{backgroundImage : `url(${media[0].url})`}}>
+
+                </div>
                 {id} - {modelYear} - {url} - {media[0].url} - {description} - {price}
             </div>
         );

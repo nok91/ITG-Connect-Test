@@ -36,7 +36,7 @@ class VehicleList extends Component {
 		const { data, isLoading } = this.state;
 		if(!isLoading) {
 			return (
-				<div>
+				<div className="vehicles-wrapper">
 					{
 						this._renderVehicleHandler()
 					}	
