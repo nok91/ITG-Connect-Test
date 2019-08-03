@@ -2,14 +2,4 @@ $bg-colour: #ccc;
 
 body {
 	background-color: $bg-colour;
-
-	.vehicles-wrapper{
-		display: flex;
-		background: red;
-
-		.vehicle-wrapper-img{
-			height: 200px;
-			width: 100%;
-		}
-	}
 }
