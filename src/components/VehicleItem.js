@@ -27,6 +27,8 @@ class VehicleItem extends Component {
         const { description, meta, price } = data;
         const { id, modelYear, url, media } = vehicle;
 
+        Console.log("test");
+
         return (
             <div className="vehicle-wrapper">
                 <div className="vehicle-wrapper-img" style={{backgroundImage : `url(${media[0].url})`}} />
