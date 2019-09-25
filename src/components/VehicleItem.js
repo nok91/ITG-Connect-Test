@@ -27,7 +27,8 @@ class VehicleItem extends Component {
         const { description, meta, price } = data;
         const { id, modelYear, url, media } = vehicle;
 
-        Console.log("test");
+        Console.log("test 1");
+        Console.log("test 2");
 
         return (
             <div className="vehicle-wrapper">
